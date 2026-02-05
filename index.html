@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monoDot - Your notes, faster.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        /* Animación suave para cambiar de sección */
+        .fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased selection:bg-black selection:text-white">
+
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" onclick="showSection('home')" class="text-xl font-bold tracking-tight hover:opacity-70 transition">
+                monoDot.
+            </a>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="#privacy" onclick="showSection('privacy')" class="hover:text-black transition">Privacy</a>
+                <a href="#terms" onclick="showSection('terms')" class="hover:text-black transition">Terms</a>
+                <a href="#support" onclick="showSection('support')" class="hover:text-black transition">Support & FAQ</a>
+            </nav>
+
+            <div class="md:hidden text-sm text-gray-500 cursor-pointer" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">Menu</div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 p-4 space-y-4 text-center">
+            <a href="#privacy" onclick="showSection('privacy'); document.getElementById('mobile-menu').classList.add('hidden')" class="block">Privacy</a>
+            <a href="#terms" onclick="showSection('terms'); document.getElementById('mobile-menu').classList.add('hidden')" class="block">Terms</a>
+            <a href="#support" onclick="showSection('support'); document.getElementById('mobile-menu').classList.add('hidden')" class="block">Support</a>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-20 px-6 max-w-4xl mx-auto text-center min-h-screen">
+
+        <section id="home" class="fade-in space-y-12">
+            
+            <div class="space-y-4 mt-10">
+                <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-black">
+                    Your notes, <br> faster and just better.
+                </h1>
+                <p class="text-lg text-gray-500 max-w-lg mx-auto leading-relaxed">
+                    Capture ideas instantly with the most minimalist AI-powered notes app for iOS. No distractions, just flow.
+                </p>
+                
+                <div class="pt-4">
+                    <a href="#" class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition transform hover:scale-105">
+                        Download on App Store
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full aspect-[16/9] bg-gray-100 rounded-2xl border border-gray-200 flex items-center justify-center mt-12">
+                <span class="text-gray-400 font-medium">Main App Screenshot (1200x675)</span>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-20 text-left">
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                        <div class="w-6 h-6 bg-gray-300 rounded"></div>
+                    </div>
+                    <h3 class="font-bold text-lg">Predictive AI</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Automate, predict, and suggest as you type. Our AI engine understands your context locally.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                        <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
+                    </div>
+                    <h3 class="font-bold text-lg">Zen Interface</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        No distractions, ultra minimalist and 100% focused on writing. Pure Swift performance.
+                    </p>
+                </div>
+                <div class="space-y-3">
+                    <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                        <div class="w-6 h-6 bg-gray-300 transform rotate-45"></div>
+                    </div>
+                    <h3 class="font-bold text-lg">iCloud Sync</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        Your notes are yours. Synced securely via your personal iCloud across all your devices.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="privacy" class="hidden fade-in text-left max-w-2xl mx-auto space-y-8">
+            <h1 class="text-3xl font-bold">Privacy Policy</h1>
+            <div class="prose prose-gray">
+                <p><strong>Last Updated: February 5, 2026</strong></p>
+                <p>Welcome to monoDot. We believe your thoughts are private. This policy outlines how we handle your data.</p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-2">1. Data Collection</h3>
+                <p>monoDot is a privacy-first application. We do not collect, store, or read your personal notes. All content is stored locally on your device and synchronized exclusively via your personal iCloud account.</p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-2">2. Payments & Financial Data</h3>
+                <p>monoDot may offer paid subscriptions via Apple In-App Purchases.</p>
+                <ul class="list-disc pl-5 space-y-2 mt-2">
+                    <li>We <strong>do not</strong> process or store your credit card information.</li>
+                    <li>All transactions are handled securely by Apple securely directly.</li>
+                    <li>We only receive a receipt token to verify your subscription status.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold mt-6 mb-2">3. Third Party Services</h3>
+                <p>We may use anonymous telemetry to improve app stability (crashes). No identifiable content is shared.</p>
+                
+                <p class="mt-8 text-sm text-gray-500">For privacy concerns: <a href="mailto:support@monodot.lat" class="underline">support@monodot.lat</a></p>
+            </div>
+        </section>
+
+        <section id="terms" class="hidden fade-in text-left max-w-2xl mx-auto space-y-8">
+            <h1 class="text-3xl font-bold">Terms & Conditions</h1>
+            <div class="prose prose-gray">
+                <p><strong>Last Updated: February 5, 2026</strong></p>
+                
+                <h3 class="text-xl font-bold mt-6 mb-2">1. Usage</h3>
+                <p>By downloading monoDot, you agree to use the app for personal, non-commercial purposes. You are responsible for the content created.</p>
+
+                <h3 class="text-xl font-bold mt-6 mb-2">2. Subscription Terms (Apple Mandated)</h3>
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-sm space-y-3">
+                    <p><strong>• Auto-Renewal:</strong> Subscriptions automatically renew unless canceled at least 24-hours before the end of the current period.</p>
+                    <p><strong>• Payment:</strong> Charged to your Apple ID at confirmation of purchase.</p>
+                    <p><strong>• Cancellation:</strong> You can manage and cancel subscriptions in your App Store Account Settings.</p>
+                    <p><strong>• Free Trials:</strong> Any unused portion of a free trial will be forfeited when purchasing a subscription.</p>
+                </div>
+
+                <h3 class="text-xl font-bold mt-6 mb-2">3. Liability</h3>
+                <p>monoDot is provided "as is". We are not liable for any data loss or damages arising from the use of the app.</p>
+            </div>
+        </section>
+
+        <section id="support" class="hidden fade-in text-left max-w-2xl mx-auto space-y-8">
+            <h1 class="text-3xl font-bold text-center">Support Center</h1>
+            <p class="text-center text-gray-500">Frequently asked questions and direct contact.</p>
+
+            <div class="space-y-6 mt-8">
+                <div class="border-b border-gray-100 pb-4">
+                    <h4 class="font-bold">Does monoDot work offline?</h4>
+                    <p class="text-gray-600 mt-2">Yes. monoDot is 100% native and works perfectly offline. AI features require internet to process, but writing is always available.</p>
+                </div>
+                <div class="border-b border-gray-100 pb-4">
+                    <h4 class="font-bold">How do I restore my purchase?</h4>
+                    <p class="text-gray-600 mt-2">Go to the app Settings > tap "Restore Purchases". Ensure you are logged in with the same Apple ID used to buy.</p>
+                </div>
+                <div class="border-b border-gray-100 pb-4">
+                    <h4 class="font-bold">How do I cancel my subscription?</h4>
+                    <p class="text-gray-600 mt-2">We cannot cancel it for you. You must go to your iPhone Settings > Apple ID > Subscriptions > monoDot > Cancel.</p>
+                </div>
+                <div class="border-b border-gray-100 pb-4">
+                    <h4 class="font-bold">Are my notes private?</h4>
+                    <p class="text-gray-600 mt-2">Yes. We cannot see them. They live on your device and your iCloud.</p>
+                </div>
+            </div>
+
+            <div class="bg-black text-white p-8 rounded-2xl text-center mt-12">
+                <h3 class="font-bold text-xl mb-2">Need more help?</h3>
+                <p class="text-gray-400 mb-6">If you found a bug or have a feature request.</p>
+                <a href="mailto:support@monodot.lat" class="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">Email Support</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 text-xs text-gray-400 border-t border-gray-100">
+        <p>&copy; 2026 monoDot. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('main > section').forEach(el => {
+                el.classList.add('hidden');
+            });
+            // Mostrar la seleccionada
+            document.getElementById(sectionId).classList.remove('hidden');
+            // Scroll arriba
+            window.scrollTo(0, 0);
+        }
+        
+        // Manejar el "Back button" del navegador
+        window.onpopstate = function() {
+            // Simple logic: if hash exists show it, else show home
+            const hash = window.location.hash.replace('#', '');
+            if(hash && document.getElementById(hash)) {
+                showSection(hash);
+            } else {
+                showSection('home');
+            }
+        };
+    </script>
+</body>
+</html>
