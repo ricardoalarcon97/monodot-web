@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - monoDot</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold tracking-tight">monoDot.</a>
+            <a href="/" class="text-sm font-medium text-gray-500 hover:text-black transition">← Back to Home</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-3xl mx-auto text-left fade-in">
+        <h1 class="text-4xl font-bold mb-2">Terms of Service</h1>
+        <p class="text-gray-500 mb-10">Last Updated: February 2026</p>
+
+        <div class="space-y-10 text-gray-700 leading-relaxed">
+            
+            <section>
+                <h3 class="text-xl font-bold text-black mb-3">1. Accounts & Data Persistence</h3>
+                <p class="mb-4">monoDot allows you to use the app without creating an account ("Guest Mode").</p>
+                <ul class="list-disc pl-5 space-y-2 marker:text-gray-400">
+                    <li><strong>Guest Users:</strong> If you use the app without an account, your notes are stored locally on your iOS device. <strong>Warning:</strong> If you delete the app, restore your phone, or lose your device, your notes will be permanently lost. We cannot recover them.</li>
+                    <li><strong>Registered Users:</strong> To ensure data safety and cloud synchronization, you must create an account. This allows you to retrieve your notes on a new device.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-black mb-3">2. Service Tiers & Limitations</h3>
+                <p class="mb-4">The app offers two tiers of service with specific usage limits:</p>
+                
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-sm space-y-4">
+                    <div>
+                        <strong class="block text-black mb-1">monoDot Basic (Free)</strong>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>Unlimited manual notes & manual reminders.</li>
+                            <li><strong>Ads:</strong> Third-party advertisements will be displayed.</li>
+                            <li><strong>AI Deep Assistance:</strong> Limited to 2 calls per day.</li>
+                            <li><strong>AI Auto-Reminders:</strong> Limited to 5 automatic detections per day.</li>
+                            <li><strong>Context Window:</strong> Maximum 10 messages per AI conversation.</li>
+                            <li><strong>Voice-to-Text:</strong> Not available.</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-gray-200">
+                        <strong class="block text-black mb-1">monoDot Pro (Subscription)</strong>
+                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
+                            <li>Everything unlimited.</li>
+                            <li>No Ads.</li>
+                            <li>Unlimited AI Assistance & Reminders.</li>
+                            <li>Full access to Voice-to-Text transcriptions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-black mb-3">3. Subscriptions & Payments</h3>
+                <p>Subscriptions are managed entirely by Apple via the App Store.</p>
+                <ul class="list-disc pl-5 space-y-2 mt-2">
+                    <li><strong>No Account Required for Payment:</strong> You do not need a monoDot account to subscribe; the purchase is linked to your Apple ID.</li>
+                    <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless turned off at least 24 hours before the end of the current period.</li>
+                    <li><strong>Cancellation:</strong> You must cancel via your iOS Settings > Apple ID > Subscriptions. monoDot cannot cancel subscriptions on your behalf.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3 class="text-xl font-bold text-black mb-3">4. User Conduct</h3>
+                <p>You agree not to misuse the AI features to generate illegal, harmful, or abusive content. We reserve the right to suspend access to AI features if abusive patterns are detected.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-xs text-gray-400 border-t border-gray-100">
+        <p>&copy; 2026 monoDot. All rights reserved.</p>
+    </footer>
+</body>
+</html>

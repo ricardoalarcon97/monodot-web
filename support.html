@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - monoDot</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+        .fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+        
+        /* Detalles para el acordeón */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ div { animation: slideDown 0.3s ease-in-out; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="text-xl font-bold tracking-tight">monoDot.</a>
+            <a href="/" class="text-sm font-medium text-gray-500 hover:text-black transition">← Back to Home</a>
+        </div>
+    </header>
+
+    <main class="pt-32 pb-20 px-6 max-w-2xl mx-auto text-left fade-in">
+        <h1 class="text-4xl font-bold mb-4 text-center">Support & FAQ</h1>
+        <p class="text-gray-500 text-center mb-12">Answers to your questions about tiers, AI, and accounts.</p>
+
+        <div class="space-y-4">
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>Do I need an account to use monoDot?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    No, you can use it instantly as a Guest. However, Guest notes are only stored on your device. <strong>We strongly recommend creating an account</strong> to sync your notes and prevent data loss if you lose your phone or delete the app.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>What is the difference between Basic and Pro?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    <strong>Basic (Free):</strong> Includes ads, 2 AI deep assist calls/day, 5 auto-reminders/day, and no voice transcription. <br><br>
+                    <strong>Pro:</strong> Removes all ads, gives you unlimited AI usage, unlimited reminders, and full Voice-to-Text capabilities.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>How do AI Auto-Reminders work?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    Just type naturally. If you write "Call John tomorrow at 10am", monoDot's AI detects the time and intent, and automatically schedules a system notification for you. Basic users have 5 of these automatic detections per day.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>Why did the AI stop replying to me?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    If you are on the Basic plan, you might have hit your daily limit (2 deep assistance calls) or the conversation length limit (10 messages). These limits reset every day. Upgrade to Pro for unlimited access.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>Can I subscribe without creating an account?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    Yes! Subscriptions are handled by Apple and linked to your Apple ID. You can enjoy Pro features instantly without registering an email with us.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>Is monoDot available on Android or Web?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    Currently, monoDot is an iOS exclusive. We focus 100% on providing the best experience for iPhone users.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>How does Voice-to-Text work?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    Available for Pro users. Simply tap the microphone icon, speak your idea, and our engine will transcribe it into a perfectly formatted text note automatically.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>I bought Pro but still see ads. Why?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    This can happen if the app loses sync with the App Store. Go to <strong>Settings > Restore Purchases</strong> within the app to refresh your status immediately.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>How do I cancel my subscription?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    We cannot cancel it for you as we don't have access to your Apple ID. Please go to iPhone Settings > Your Name > Subscriptions > monoDot > Cancel Subscription.
+                </div>
+            </details>
+
+            <details class="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+                <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-gray-800 hover:bg-gray-100 transition">
+                    <span>Are my notes encrypted?</span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="20" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="20"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="text-gray-600 px-5 pb-5 leading-relaxed text-sm">
+                    Yes. Notes on your device are protected by iOS sandboxing. Notes synced to the cloud (for registered users) are encrypted in transit and at rest.
+                </div>
+            </details>
+
+        </div>
+
+        <div class="bg-black text-white p-8 rounded-2xl text-center mt-12 shadow-lg">
+            <h3 class="font-bold text-xl mb-2">Still have questions?</h3>
+            <p class="text-gray-400 mb-6 text-sm">Our support team is ready to help you.</p>
+            <a href="mailto:support@monodot.lat" class="inline-block bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">Email Support</a>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-xs text-gray-400 border-t border-gray-100">
+        <p>&copy; 2026 monoDot. All rights reserved.</p>
+    </footer>
+</body>
+</html>
