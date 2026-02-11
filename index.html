@@ -17,7 +17,7 @@
         .iphone-wrapper {
             position: relative;
             width: 100%;
-            /* El ancho se controla desde el contenedor padre ahora */
+            /* El ancho lo controla el padre (.phone-unit) */
         }
         .iphone-frame {
             position: relative;
@@ -25,6 +25,7 @@
             width: 100%;
             display: block;
             pointer-events: none;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2)); /* Sombra realista al marco */
         }
         .iphone-screen {
             position: absolute;
@@ -33,7 +34,7 @@
             width: 91%;
             height: 97%;
             z-index: 10;
-            border-radius: 12% / 6%; /* Ajuste curvatura adaptable */
+            border-radius: 12% / 6%;
             overflow: hidden;
             background: #000;
         }
@@ -43,55 +44,68 @@
             object-fit: cover;
         }
     
-        /* --- COMPOSICIÓN TRÍO (La magia) --- */
+        /* --- COMPOSICIÓN TRÍO (CARRUSEL 3D) --- */
         .trio-container {
             position: relative;
-            height: 600px; /* Altura del área */
+            height: 750px; /* Más alto para acomodar los teléfonos gigantes */
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 2rem;
+            margin-top: 0;
+            perspective: 1000px; /* Profundidad 3D */
         }
         
-        /* Unidad básica del teléfono en el trío */
+        /* Unidad básica del teléfono */
         .phone-unit {
-            width: 260px; /* Tamaño base */
+            width: 340px; /* AUMENTADO: Mucho más grande en escritorio */
             position: absolute;
-            transition: all 0.5s ease;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
     
-        /* Posición: CENTRO (Foto) */
+        /* --- POSICIONES --- */
+    
+        /* CENTRO (Foto) - El Protagonista */
         .pos-center {
-            z-index: 30; /* El más alto, al frente */
-            position: relative; /* Relativo para centrar el flex */
-            transform: scale(1.1); /* Un 10% más grande */
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra fuerte */
-            border-radius: 40px;
+            z-index: 30;
+            transform: scale(1.1); /* Un 10% extra sobre el tamaño base */
         }
     
-        /* Posición: IZQUIERDA (Video) */
+        /* IZQUIERDA (Video) */
         .pos-left {
-            z-index: 10; /* Detrás */
-            left: 50%;
-            transform: translateX(-130%) scale(0.9); /* Mover a la izq y achicar */
-            opacity: 0.9;
+            z-index: 10;
+            transform: translateX(-85%) scale(0.9) rotateY(15deg); /* Ligera rotación 3D hacia adentro */
+            opacity: 0.85; /* Un poco más visible que antes */
         }
     
-        /* Posición: DERECHA (Video) */
+        /* DERECHA (Video) */
         .pos-right {
-            z-index: 10; /* Detrás */
-            right: 50%;
-            transform: translateX(130%) scale(0.9); /* Mover a la der y achicar */
-            opacity: 0.9;
+            z-index: 10;
+            transform: translateX(85%) scale(0.9) rotateY(-15deg); /* Ligera rotación 3D hacia adentro */
+            opacity: 0.85;
         }
     
-        /* Ajuste para móviles */
+        /* --- AJUSTES PARA MÓVIL (iPhone 15 Pro y similares) --- */
         @media (max-width: 768px) {
-            .trio-container { height: 400px; }
-            .phone-unit { width: 160px; }
-            .pos-center { transform: scale(1.05); }
-            .pos-left { transform: translateX(-90%) scale(0.85); }
-            .pos-right { transform: translateX(90%) scale(0.85); }
+            .trio-container { 
+                height: 550px; /* Altura ajustada para móvil */
+            }
+            .phone-unit { 
+                width: 230px; /* AUMENTADO: De 160px a 230px (Gigante en móvil) */
+            }
+            
+            /* Ajustamos la superposición en móvil para que quepan */
+            .pos-center { 
+                transform: scale(1.05); 
+                z-index: 40;
+            }
+            .pos-left { 
+                transform: translateX(-65%) scale(0.85); /* Menos desplazamiento lateral */
+                opacity: 0.6; /* Un poco más transparentes para no distraer tanto */
+            }
+            .pos-right { 
+                transform: translateX(65%) scale(0.85); 
+                opacity: 0.6;
+            }
         }
     </style>
 </head>
