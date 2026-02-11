@@ -8,36 +8,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; overflow-x: hidden; }
         
-        /* Animación de entrada */
         .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
         @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
     
-        /* Contenedor del iPhone */
+        /* --- ESTILOS DEL IPHONE BASE --- */
         .iphone-wrapper {
             position: relative;
             width: 100%;
-            max-width: 260px; /* Tamaño ideal para que entren 3 en línea */
-            margin: 0 auto;
+            /* El ancho se controla desde el contenedor padre ahora */
         }
-        /* El marco transparente */
         .iphone-frame {
             position: relative;
-            z-index: 10;
+            z-index: 20;
             width: 100%;
             display: block;
             pointer-events: none;
         }
-        /* El contenido (Foto/Video) que va dentro del marco */
         .iphone-screen {
             position: absolute;
-            top: 1.5%;    /* Ajusta este % si el video se ve movido hacia arriba/abajo */
-            left: 4.5%;   /* Ajusta este % si el video se ve movido hacia los lados */
+            top: 1.5%;
+            left: 4.5%;
             width: 91%;
             height: 97%;
-            z-index: 5;
-            border-radius: 2.5rem;
+            z-index: 10;
+            border-radius: 12% / 6%; /* Ajuste curvatura adaptable */
             overflow: hidden;
             background: #000;
         }
@@ -45,6 +41,57 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+    
+        /* --- COMPOSICIÓN TRÍO (La magia) --- */
+        .trio-container {
+            position: relative;
+            height: 600px; /* Altura del área */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        
+        /* Unidad básica del teléfono en el trío */
+        .phone-unit {
+            width: 260px; /* Tamaño base */
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+    
+        /* Posición: CENTRO (Foto) */
+        .pos-center {
+            z-index: 30; /* El más alto, al frente */
+            position: relative; /* Relativo para centrar el flex */
+            transform: scale(1.1); /* Un 10% más grande */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra fuerte */
+            border-radius: 40px;
+        }
+    
+        /* Posición: IZQUIERDA (Video) */
+        .pos-left {
+            z-index: 10; /* Detrás */
+            left: 50%;
+            transform: translateX(-130%) scale(0.9); /* Mover a la izq y achicar */
+            opacity: 0.9;
+        }
+    
+        /* Posición: DERECHA (Video) */
+        .pos-right {
+            z-index: 10; /* Detrás */
+            right: 50%;
+            transform: translateX(130%) scale(0.9); /* Mover a la der y achicar */
+            opacity: 0.9;
+        }
+    
+        /* Ajuste para móviles */
+        @media (max-width: 768px) {
+            .trio-container { height: 400px; }
+            .phone-unit { width: 160px; }
+            .pos-center { transform: scale(1.05); }
+            .pos-left { transform: translateX(-90%) scale(0.85); }
+            .pos-right { transform: translateX(90%) scale(0.85); }
         }
     </style>
 </head>
@@ -71,58 +118,68 @@
         </div>
     </header>
 
-    <main class="pt-24 pb-20 px-6 max-w-5xl mx-auto text-center min-h-screen">
+    <main class="pt-24 pb-20 px-6 max-w-7xl mx-auto text-center min-h-screen">
         <img src="monodot_weblogo.png" alt="monoDot Logo" class="w-40 mx-auto mb-8 mt-10 fade-in">
         
         <div class="space-y-4 mt-10 fade-in" style="animation-delay: 0.1s;">
-            <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-black">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-black">
                 Your notes, <br> faster and just better.
             </h1>
             <p class="text-lg text-gray-500 max-w-lg mx-auto leading-relaxed">
-                Capture ideas instantly via chat or write deeply. The minimalist iOS notes app with predictive AI that respects your flow.
+                Capture ideas instantly via chat or write deeply. The minimalist iOS notes app that respects your flow.
             </p>
             
-            <div class="pt-8">
+            <div class="pt-8 mb-20">
                 <a href="#" class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition transform hover:scale-105 shadow-lg">
                     Download on App Store
                 </a>
             </div>
         </div>
     
-        <div class="mt-16 fade-in" style="animation-delay: 0.2s;">
-            <img src="monodot_appusage0.png" alt="monoDot Interface" class="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-gray-100">
+        <div class="fade-in relative z-0 mb-32" style="animation-delay: 0.2s;">
+            <img src="monodot_appusage0.png" alt="Main Interface Hand" class="w-full max-w-5xl mx-auto object-contain drop-shadow-2xl">
         </div>
     
-        <div class="grid md:grid-cols-3 gap-8 mt-24 items-start fade-in" style="animation-delay: 0.3s;">
+        <div class="fade-in" style="animation-delay: 0.3s;">
+            <h2 class="text-3xl font-bold mb-4">See it in action</h2>
             
-            <div class="iphone-wrapper">
-                <img src="iphone-frame.png" class="iphone-frame">
-                <div class="iphone-screen">
-                    <video autoplay muted loop playsinline>
-                        <source src="monodot_appusage1.mp4" type="video/mp4">
-                    </video>
+            <div class="trio-container">
+                
+                <div class="phone-unit pos-left">
+                    <div class="iphone-wrapper">
+                        <img src="iphone-frame.png" class="iphone-frame">
+                        <div class="iphone-screen">
+                            <video autoplay muted loop playsinline>
+                                <source src="monodot_appusage1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
-            </div>
     
-            <div class="iphone-wrapper">
-                <img src="iphone-frame.png" class="iphone-frame">
-                <div class="iphone-screen">
-                    <img src="monodot_appusage2.png" alt="monoDot Feature">
+                <div class="phone-unit pos-center">
+                    <div class="iphone-wrapper">
+                        <img src="iphone-frame.png" class="iphone-frame">
+                        <div class="iphone-screen">
+                            <img src="monodot_appusage2.png" alt="App Feature Center">
+                        </div>
+                    </div>
                 </div>
-            </div>
     
-            <div class="iphone-wrapper">
-                <img src="iphone-frame.png" class="iphone-frame">
-                <div class="iphone-screen">
-                    <video autoplay muted loop playsinline>
-                        <source src="monodot_appusage3.mp4" type="video/mp4">
-                    </video>
+                <div class="phone-unit pos-right">
+                    <div class="iphone-wrapper">
+                        <img src="iphone-frame.png" class="iphone-frame">
+                        <div class="iphone-screen">
+                            <video autoplay muted loop playsinline>
+                                <source src="monodot_appusage3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
-            </div>
     
+            </div>
         </div>
     
-        <div class="grid md:grid-cols-3 gap-12 mt-32 text-left fade-in" style="animation-delay: 0.4s;">
+        <div class="grid md:grid-cols-3 gap-12 mt-20 text-left max-w-4xl mx-auto fade-in" style="animation-delay: 0.4s;">
             <div class="space-y-3">
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
