@@ -9,9 +9,43 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
         body { font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif; }
-        /* Animación suave de entrada */
-        .fade-in { animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
+        
+        /* Animación de entrada */
+        .fade-in { animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; transform: translateY(20px); }
         @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+    
+        /* Contenedor del iPhone */
+        .iphone-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 260px; /* Tamaño ideal para que entren 3 en línea */
+            margin: 0 auto;
+        }
+        /* El marco transparente */
+        .iphone-frame {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            display: block;
+            pointer-events: none;
+        }
+        /* El contenido (Foto/Video) que va dentro del marco */
+        .iphone-screen {
+            position: absolute;
+            top: 1.5%;    /* Ajusta este % si el video se ve movido hacia arriba/abajo */
+            left: 4.5%;   /* Ajusta este % si el video se ve movido hacia los lados */
+            width: 91%;
+            height: 97%;
+            z-index: 5;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            background: #000;
+        }
+        .iphone-screen img, .iphone-screen video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900 antialiased selection:bg-black selection:text-white">
@@ -37,9 +71,10 @@
         </div>
     </header>
 
-    <main class="pt-24 pb-20 px-6 max-w-4xl mx-auto text-center min-h-screen fade-in">
+    <main class="pt-24 pb-20 px-6 max-w-5xl mx-auto text-center min-h-screen">
         <img src="monodot_weblogo.png" alt="monoDot Logo" class="w-40 mx-auto mb-8 mt-10 fade-in">
-        <div class="space-y-4 mt-10">
+        
+        <div class="space-y-4 mt-10 fade-in" style="animation-delay: 0.1s;">
             <h1 class="text-5xl md:text-6xl font-bold tracking-tight text-black">
                 Your notes, <br> faster and just better.
             </h1>
@@ -53,38 +88,63 @@
                 </a>
             </div>
         </div>
-
-        <div class="w-full aspect-[16/9] bg-gray-50 rounded-2xl border border-gray-200 flex items-center justify-center mt-16 shadow-sm">
-            <span class="text-gray-400 font-medium">Main App Screenshot (1200x675)</span>
+    
+        <div class="mt-16 fade-in" style="animation-delay: 0.2s;">
+            <img src="monodot_appusage0.png" alt="monoDot Interface" class="w-full max-w-4xl mx-auto rounded-2xl shadow-2xl border border-gray-100">
         </div>
-
-        <div class="grid md:grid-cols-3 gap-8 mt-20 text-left">
+    
+        <div class="grid md:grid-cols-3 gap-8 mt-24 items-start fade-in" style="animation-delay: 0.3s;">
+            
+            <div class="iphone-wrapper">
+                <img src="iphone-frame.png" class="iphone-frame">
+                <div class="iphone-screen">
+                    <video autoplay muted loop playsinline>
+                        <source src="monodot_appusage1.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+    
+            <div class="iphone-wrapper">
+                <img src="iphone-frame.png" class="iphone-frame">
+                <div class="iphone-screen">
+                    <img src="monodot_appusage2.png" alt="monoDot Feature">
+                </div>
+            </div>
+    
+            <div class="iphone-wrapper">
+                <img src="iphone-frame.png" class="iphone-frame">
+                <div class="iphone-screen">
+                    <video autoplay muted loop playsinline>
+                        <source src="monodot_appusage3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div class="grid md:grid-cols-3 gap-12 mt-32 text-left fade-in" style="animation-delay: 0.4s;">
             <div class="space-y-3">
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
-                <h3 class="font-bold text-lg">Instant Chat Notes</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">
-                    Don't open a file. Just type in the chat interface. monoDot organizes your chaotic thoughts into structured notes automatically.
-                </p>
+                <h3 class="font-bold text-lg">Faster than ever</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">Open the app. Write a quick note. Chat with yourself, all in one place.</p>
             </div>
+            
             <div class="space-y-3">
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 </div>
-                <h3 class="font-bold text-lg">Smart AI Reminders</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">
-                    Type "Meeting tomorrow at 5". monoDot detects the intent and sets a system reminder for you. No clicks needed.
-                </p>
+                <h3 class="font-bold text-lg">Automations in seconds</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">monoDot detects intent and creates reminders with a single click.</p>
             </div>
+    
             <div class="space-y-3">
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                 </div>
-                <h3 class="font-bold text-lg">Voice Transcriptions</h3>
-                <p class="text-sm text-gray-500 leading-relaxed">
-                    Speak your mind. We transcribe your audio instantly and turn it into a formatted text note. (Pro Feature).
-                </p>
+                <h3 class="font-bold text-lg">Voice Magic</h3>
+                <p class="text-sm text-gray-500 leading-relaxed">No hands to type? monoDot transcribes your voice into a note automatically.</p>
             </div>
         </div>
     </main>
