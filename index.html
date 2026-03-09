@@ -21,53 +21,45 @@
             <a href="/" class="text-xl font-bold tracking-tight hover:opacity-70 transition">
                 bubbles.
             </a>
-            
             <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
                 <a href="/privacy" class="hover:text-black transition">Privacy</a>
                 <a href="/terms" class="hover:text-black transition">Terms</a>
                 <a href="/support" class="hover:text-black transition">Support & FAQ</a>
             </nav>
-
-            <div class="md:hidden text-sm text-gray-500 cursor-pointer" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">Menu</div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 p-4 space-y-4 text-center">
-            <a href="/privacy" class="block py-2 text-gray-600">Privacy</a>
-            <a href="/terms" class="block py-2 text-gray-600">Terms</a>
-            <a href="/support" class="block py-2 text-gray-600">Support</a>
         </div>
     </header>
 
-    <main class="pt-24 pb-20 px-4 md:px-10 max-w-[1800px] mx-auto text-center min-h-screen">
-        <img src="monodot_weblogo.png" alt="bubbles Logo" class="w-40 mx-auto mb-8 mt-10 fade-in">
+    <main class="pt-32 pb-20 px-6 max-w-[1400px] mx-auto text-center min-h-screen">
+        <img src="monodot_weblogo.png" alt="bubbles Logo" class="w-32 mx-auto mb-8 fade-in">
         
-        <div class="space-y-4 mt-10 fade-in" style="animation-delay: 0.1s;">
-            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-black">
+        <div class="space-y-4 fade-in" style="animation-delay: 0.1s;">
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tight text-black leading-[1.1]">
                 Your notes, <br> faster and just better.
             </h1>
             <p class="text-lg text-gray-500 max-w-lg mx-auto leading-relaxed">
                 Capture ideas instantly via chat or write deeply. The minimalist iOS notes app that respects your flow.
             </p>
             
-            <div class="pt-8 mb-20">
-                <a href="#" class="inline-block bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-gray-800 transition transform hover:scale-105 shadow-lg">
+            <div class="pt-10 mb-20">
+                <a href="#" class="inline-block bg-black text-white px-10 py-4 rounded-full font-medium hover:bg-gray-800 transition transform hover:scale-105 shadow-xl">
                     Download on App Store
                 </a>
             </div>
         </div>
 
-        <div class="grid grid-cols-4 gap-12 max-w-screen-xl mx-auto fade-in mt-64 mb-72" style="animation-delay: 0.2s;">
-            <img src="bubbles 1.png" alt="bubbles screen 1" class="w-full h-auto object-contain transform scale-[1.80] hover:scale-[1.85] transition duration-500">
-            <img src="bubbles 2.png" alt="bubbles screen 2" class="w-full h-auto object-contain transform scale-[1.80] hover:scale-[1.85] transition duration-500">
-            <img src="bubbles 3.png" alt="bubbles screen 3" class="w-full h-auto object-contain transform scale-[1.80] hover:scale-[1.85] transition duration-500">
-            <img src="bubbles 4.png" alt="bubbles screen 4" class="w-full h-auto object-contain transform scale-[1.80] hover:scale-[1.85] transition duration-500">
+        <div class="grid grid-cols-4 gap-4 md:gap-8 max-w-6xl mx-auto fade-in mt-10 mb-40" style="animation-delay: 0.2s;">
+            <img src="bubbles 1.png" alt="bubbles 1" class="w-full h-auto object-contain transform scale-[1.1] hover:scale-[1.15] transition duration-500">
+            <img src="bubbles 2.png" alt="bubbles 2" class="w-full h-auto object-contain transform scale-[1.1] hover:scale-[1.15] transition duration-500">
+            <img src="bubbles 3.png" alt="bubbles 3" class="w-full h-auto object-contain transform scale-[1.1] hover:scale-[1.15] transition duration-500">
+            <img src="bubbles 4.png" alt="bubbles 4" class="w-full h-auto object-contain transform scale-[1.1] hover:scale-[1.15] transition duration-500">
         </div>
 
-        <div class="grid md:grid-cols-3 gap-12 mt-40 text-left max-w-4xl mx-auto fade-in pb-20" style="animation-delay: 0.4s;">
+        <div class="grid md:grid-cols-3 gap-16 text-left max-w-5xl mx-auto fade-in pb-20" style="animation-delay: 0.4s;">
             <div class="space-y-3">
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                 </div>
-                <h3 class="font-bold text-lg">Faster than everrrr!</h3>
+                <h3 class="font-bold text-lg text-black">Faster than everrrr!</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">Open the app. Write a quick note. Chat with yourself, all in one place.</p>
             </div>
             
@@ -75,7 +67,7 @@
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 </div>
-                <h3 class="font-bold text-lg">Automations in seconds</h3>
+                <h3 class="font-bold text-lg text-black">Automations in seconds</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">bubbles detects intent and creates reminders with a single click.</p>
             </div>
 
@@ -83,19 +75,14 @@
                 <div class="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-4 border border-gray-100">
                     <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"></path></svg>
                 </div>
-                <h3 class="font-bold text-lg">Voice Magic</h3>
+                <h3 class="font-bold text-lg text-black">Voice Magic</h3>
                 <p class="text-sm text-gray-500 leading-relaxed">No hands to type? bubbles transcribes your voice into a note automatically.</p>
             </div>
         </div>
     </main>
 
-    <footer class="py-8 border-t border-gray-100 bg-white">
-        <nav class="flex justify-center space-x-8 text-sm font-medium text-gray-500">
-            <a href="/privacy" class="hover:text-black transition">Privacy Policy</a>
-            <a href="/terms" class="hover:text-black transition">Terms & Conditions</a>
-            <a href="/support" class="hover:text-black transition">Support</a>
-        </nav>
-        <p class="text-center text-xs text-gray-400 mt-6">© 2026 bubbles. All rights reserved. Designed by Lat Ware in Guayaquil.</p>
+    <footer class="py-12 border-t border-gray-100 bg-white">
+        <p class="text-center text-xs text-gray-400">© 2026 bubbles. All rights reserved. Designed by Lat Ware in Guayaquil.</p>
     </footer>
 </body>
 </html>
