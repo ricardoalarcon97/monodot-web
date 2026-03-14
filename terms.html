@@ -15,81 +15,31 @@
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
-    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
+    <header class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="/" class="text-xl font-bold tracking-tight">bubbles.</a>
-            <a href="/" class="text-sm font-medium text-gray-500 hover:text-black transition">← Back to Home</a>
+            <a href="/" class="text-xl font-bold tracking-tight hover:opacity-70 transition">bubbles.</a>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-500">
+                <a href="/privacy" class="hover:text-black transition">Privacy</a>
+                <a href="/terms" class="hover:text-black transition">Terms</a>
+                <a href="/support" class="hover:text-black transition">Support & FAQ</a>
+            </nav>
         </div>
     </header>
 
     <main class="pt-32 pb-20 px-6 max-w-3xl mx-auto text-left fade-in">
-        <h1 class="text-4xl font-bold mb-2">Terms of Service</h1>
-        <p class="text-gray-500 mb-10">Last Updated: February 2026</p>
-
-        <div class="space-y-10 text-gray-700 leading-relaxed">
-            
-            <section>
-                <h3 class="text-xl font-bold text-black mb-3">1. Accounts & Data Persistence</h3>
-                <p class="mb-4">bubbles allows you to use the app without creating an account ("Guest Mode").</p>
-                <ul class="list-disc pl-5 space-y-2 marker:text-gray-400">
-                    <li><strong>Guest Users:</strong> If you use the app without an account, your notes are stored locally on your iOS device. <strong>Warning:</strong> If you delete the app, restore your phone, or lose your device, your notes will be permanently lost. We cannot recover them.</li>
-                    <li><strong>Registered Users:</strong> To ensure data safety and cloud synchronization, you must create an account. This allows you to retrieve your notes on a new device.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3 class="text-xl font-bold text-black mb-3">2. Service Tiers & Limitations</h3>
-                <p class="mb-4">The app offers two tiers of service with specific usage limits:</p>
-                
-                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-sm space-y-4">
-                    <div>
-                        <strong class="block text-black mb-1">bubbles Basic (Free)</strong>
-                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                            <li>Unlimited manual notes & manual reminders.</li>
-                            <li><strong>Ads:</strong> Third-party advertisements will be displayed.</li>
-                            <li><strong>AI Deep Assistance:</strong> Limited to 2 calls per day.</li>
-                            <li><strong>AI Auto-Reminders:</strong> Limited to 5 automatic detections per day.</li>
-                            <li><strong>Context Window:</strong> Maximum 10 messages per AI conversation.</li>
-                            <li><strong>Voice-to-Text:</strong> Not available.</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-gray-200">
-                        <strong class="block text-black mb-1">monoDot Pro (Subscription)</strong>
-                        <ul class="list-disc pl-5 space-y-1 text-gray-600">
-                            <li>Everything unlimited.</li>
-                            <li>No Ads.</li>
-                            <li>Unlimited AI Assistance & Reminders.</li>
-                            <li>Full access to Voice-to-Text transcriptions.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <h3 class="text-xl font-bold text-black mb-3">3. Subscriptions & Payments</h3>
-                <p>Subscriptions are managed entirely by Apple via the App Store.</p>
-                <ul class="list-disc pl-5 space-y-2 mt-2">
-                    <li><strong>No Account Required for Payment:</strong> You do not need a monoDot account to subscribe; the purchase is linked to your Apple ID.</li>
-                    <li><strong>Auto-Renewal:</strong> Subscriptions automatically renew unless turned off at least 24 hours before the end of the current period.</li>
-                    <li><strong>Cancellation:</strong> You must cancel via your iOS Settings > Apple ID > Subscriptions. monoDot cannot cancel subscriptions on your behalf.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3 class="text-xl font-bold text-black mb-3">4. User Conduct</h3>
-                <p>You agree not to misuse the AI features to generate illegal, harmful, or abusive content. We reserve the right to suspend access to AI features if abusive patterns are detected.</p>
-            </section>
-
-        </div>
+        <div name="termly-embed" data-id="0a8daa2b-0c94-4e10-8094-7b710aeeebe6"></div>
     </main>
 
-    <footer class="py-8 border-t border-gray-100 bg-white">
-        <nav class="flex justify-center space-x-8 text-sm font-medium text-gray-500">
-            <a href="/privacy" class="hover:text-black transition">Privacy Policy</a>
-            <a href="/terms" class="hover:text-black transition">Terms & Conditions</a>
-            <a href="/support" class="hover:text-black transition">Support</a>
-        </nav>
-        <p class="text-center text-xs text-gray-400 mt-6">© 2026 bubbles. All rights reserved.</p>
+    <script type="text/javascript">(function(d, s, id) {
+        var js, tjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "https://app.termly.io/embed-policy.min.js";
+        tjs.parentNode.insertBefore(js, tjs);
+    }(document, 'script', 'termly-jssdk'));</script>
+
+    <footer class="py-12 border-t border-gray-100 bg-white">
+        <p class="text-center text-xs text-gray-400">© 2026 bubbles. All rights reserved. Designed by Lat Ware in Guayaquil.</p>
     </footer>
 </body>
 </html>
