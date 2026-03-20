@@ -1,5 +1,11 @@
 {
-  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/eula", "destination": "/eula.html" },
+    { "source": "/support", "destination": "/support.html" }
+  ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
