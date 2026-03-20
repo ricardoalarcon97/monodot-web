@@ -1,15 +1,5 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    {
-      "source": "/.well-known/apple-app-site-association",
-      "destination": "/public/.well-known/apple-app-site-association"
-    },
-    {
-      "source": "/apple-app-site-association",
-      "destination": "/public/apple-app-site-association"
-    }
-  ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
